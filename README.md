@@ -1,0 +1,2 @@
+# hiveAfrica
+a conference app
