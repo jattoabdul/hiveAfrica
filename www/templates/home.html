@@ -1,73 +1,80 @@
 ﻿
 <ion-view view-title="Hive Africa">
     <ion-content>
-        <div class="bar bar-subheader bar-stable static text-center">
-            <strong class="title">Welcome</strong>
+        <div class="video-container no-padding-top">
+            <video id="videoE" width="100%" height="180" autoplay muted loop
+            preload="metadata" class="videoPlayer"
+            webkit-playsinLine >
+                <source src="{{video}}" type="video/mp4">
+            </video>
         </div>
-        
-        <div class="card">
-            <div class="item item-text-wrap">
-                <ion-item>
-                    <div class="video-container">
-                        <iframe src="video/Welcome1.mp4" frameborder="0" width="565" height="180"></iframe>
-                    </div>
-            </ion-item>
-            </div>
-        </div>
-        <div class="item item-divider">
-        ABOUT HIVE
+        <div class="item item-divider text-center">
+        About Hive Africa
         </div>                                        
         <div class  = "item item-text-wrap">
             <div class="row">
-                <div class="col">
-                    <p> 
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem rerum dignissimos excepturi voluptates repellendus, cumque! Consectetur voluptatibus magnam aliquid, quasi possimus debitis ex non facilis, vel. Impedit quas, enim totam.
-                    </p>                    
-                </div>
-                <div class="col">
-                    <p> 
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore harum dicta ipsam, accusantium quibusdam nemo porro dolorum pariatur adipisci molestias autem dolores saepe laboriosam numquam deleniti. Id officia unde reiciendis.
-                    </p>
+                <div class="col" ng-bind-html="about">
+                 
                 </div>
             </div>
-            <div class="row">
-                <button class="button button-raised button-stable ink-dark" data-ng-click="click2Get()">Read More</button>
+            <div class="row-center col-offset-25">
+                <button class="button button-small button-raised button-stable ink-dark" ui-sref="app.about" >Read More</button>
             </div>
         </div>
-        <div class="card">
-            <div class="item item-text-wrap">
-                <timer interval="1000">{{hours}} hour{{hoursS}}, {{minutes}} minute{{minutesS}}, {{seconds}} second{{secondsS}}.</timer>
-            </div>
+        <div class="text-center" ng-bind-html="countdown">
+            
         </div>
-
+        <button class="button button-block button-assertive waves-button" ui-sref="app.register">
+            Register for Hive Africa
+        </button>
         <div class="item item-text-wrap">
             <div class="row responsive-sm">
                 <div class="col">
-                    <h4>Head Title</h4>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus qui omnis doloremque saepe, sint suscipit. Quo excepturi nostrum asperiores quod magnam, corporis pariatur dolor eveniet, impedit repudiandae quasi obcaecati ea!
+                    <h3>Learn</h3>
+                    {{homedata.learn}}
                 </div>
                 <div class="col">
-                    <h4>Head Title</h4>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. At dignissimos, minima suscipit totam iste recusandae nesciunt qui cumque mollitia. Possimus libero dolorem in aliquam quidem dignissimos, rerum nostrum temporibus nulla!
+                    <h3>Connect</h3>
+                    {{homedata.connect}}
                 </div>
                 <div class="col">
-                    <h4>Head Title</h4>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos quibusdam doloribus consectetur sint, incidunt numquam. Id odio, doloremque est temporibus reiciendis fugit. Rerum sed magnam corporis ipsa odit nesciunt dolorem.
+                    <h3>Location</h3>
+                    {{homedata.location}}
                 </div>
             </div>
         </div>
-        
-        <br/>
-
-        <div class="item item-text-wrap has-footer" style="background-image: url('img/newmaterial.jpg');">
-            <div class="row">
-                <h3>Location</h3>
-                <h4>Sandrialia Hotels</h4>
+        <ion-slide-box auto-play="true" show-pager="false" does-continue="true">
+            <ion-slide>
+                <div class="box"><img src="img/sandralia1.jpg" alt="location sandralia image" width="100%"></div>
+            </ion-slide>
+            <ion-slide>
+                <div class="box"><img src="img/sandralia2.jpg" alt="location sandralia image" width="100%"></div>
+            </ion-slide>
+            <ion-slide>
+                <div class="box"><img src="img/sandralia3.jpg" alt="location sandralia image" width="100%"></div>
+            </ion-slide>
+            <ion-slide>
+                <div class="box"><img src="img/sandralia4.jpg" alt="location sandralia image" width="100%"></div>
+            </ion-slide>
+            <ion-slide>
+                <div class="box"><img src="img/sandralia5.jpg" alt="location sandralia image" width="100%"></div>
+            </ion-slide>
+        </ion-slide-box>
+        <h3 class="text-center">Speakers</h3>
+        <div class="list card" ng-repeat="speaker in speakers track by $index">
+            <div class="item item-image">
+                <img src="{{speaker.img_url}}" width="100%">
+            </div>
+            <div class="item item-body">
+                <h4 class="hiveNameTitle text-center">{{speaker.name}}</h4>
+                <h5 class="text-center">{{speaker.company}}</h5>
+                <p ng-bind-html="speaker.bio">
+                </p>
             </div>
         </div>
-
-        <div class="bar bar-footer bar-assertive static">
-            <div class="title"><p>Footer</p></div>
-        </div>
+        <button class="button button-block button-assertive waves-button" ui-sref="app.register">
+            Register for Hive Africa
+        </button>
+        <img src="img/footerbkg.png" alt="" class="item-bg-image" width="100%">
     </ion-content>
 </ion-view>

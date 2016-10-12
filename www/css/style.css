@@ -21,7 +21,11 @@ h4:first-child {
     border-top: none;
     padding-top: initial;
 }
-
+h3 {
+    color: #a8182f !important;
+    font-size: 25px !important;
+    margin-bottom: 16px;
+}
 .title-bordered {
     border-top: solid 2px #bbb;
     padding-top: 30px;
@@ -62,7 +66,7 @@ p {
 /* Menu */
 
 .menu .bar.bar-header.expanded {
-    background-image: url('../img/material-graphite.jpg');
+    background-image: url('../img/material-graphite.jpg') !important;
     background-size: 120%;
     background-position: 0%;
     transition: all .5s ease-in-out;
@@ -223,12 +227,17 @@ p {
 margin-top:10px;
 }
 
+video{
+  width: 100%    !important;
+  height: auto   !important;
+}
+
 .video-container {
     position: relative;
     padding-bottom: 56.25%;
     padding-top: 30px; height: 0; overflow: hidden;
 }
- 
+
 .video-container iframe, .video-container object, .video-container embed {
     position: absolute;
     top: 0;
@@ -236,3 +245,30 @@ margin-top:10px;
     width: 100%;
     height: 100%;
 }
+.hiveNameTitle{
+    font-size: 17px !important;
+}
+.themeColor{
+    color: #a8182f !important;
+}
+
+/*changing side menu bg*/
+/*.my-side-menu{
+ background: #a8182f !important;
+}
+
+.my-list-item{
+ background: #a8182f !important;
+ color:#fff !important;
+ border:#564545 !important;
+}*/
+
+/*changing default app loader/spinner icon*/
+.loading-container .loading {
+    background-color: #a8182f;
+    color: white;
+    border-width: 1px !important;
+    border-color: #999 !important;
+    border-style: solid !important;
+}
+

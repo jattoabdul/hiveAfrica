@@ -1,2 +1,6 @@
-# intellix
-a mobile application for educational resource management system for nigerian universities
+# Hive Africa
+a mobile application for Hive Africa Conferences
+
+#Author 
+Aminujatto Abdulqahhar
+

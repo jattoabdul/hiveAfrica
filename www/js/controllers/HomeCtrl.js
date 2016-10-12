@@ -1,4 +1,22 @@
-﻿app.controller('HomeCtrl', function ($scope, $http, $log, $stateParams, ionicMaterialMotion) {
+﻿app.controller('HomeCtrl', function ($scope, $http, alldata, $timeout, $log, $ionicSlideBoxDelegate, $stateParams, $ionicLoading, ionicMaterialMotion) {
+    
+    $scope.homedata = alldata;
+    $scope.about  = $scope.homedata.about_hive;
+    $scope.video = "video/Welcome.mp4"; //$scope.homedata.video_url;
+    $scope.speakers = $scope.homedata.speakers;
+    // $scope.learn  = $scope.homedata.learn;
+    // $scope.connect  = $scope.homedata.connect;
+    // $scope.location  = $scope.homedata.location;
+    $scope.countdown  = $scope.homedata.count_down_text;
+
+    // $scope.videoE = document.getElementsById('videoE');
+
+    // $cope.videoAudioToggler = function () { 
+    //     if ($scope.videoE.muted === false){
+
+    //     }
+    //  };
+    
 
     var reset = function() {
         var inClass = document.querySelectorAll('.in');
@@ -54,15 +72,9 @@
 
     $scope.blinds();
 
-
-    $scope.getD = function($scope){
-        $http.jsonp("http://ip.jsontest.com/?callback=JSON_CALLBACK")//change json url
-        .success(function(result){
-            $log.info(JSON.stringify(result.ip));//set to data object
-        });
-    };
-    
-    $scope.getD();
-
-
+    $scope.slide = (function() {
+                $ionicSlideBoxDelegate.slide(0);
+                $ionicSlideBoxDelegate.update();
+                $scope.$apply();
+            });
 });

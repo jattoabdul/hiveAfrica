@@ -1,6 +1,5 @@
-﻿
-<ion-side-menus enable-menu-with-back-views="false">
-    <ion-side-menu-content>
+﻿<ion-side-menus enable-menu-with-back-views="false">
+    <ion-side-menu-content class="my-side-menu">
         <ion-nav-bar class="bar-assertive">
             <ion-nav-back-button class="no-text">
             </ion-nav-back-button>
@@ -8,9 +7,6 @@
                 <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
             </ion-nav-buttons>
         </ion-nav-bar>
-        <button id="fab" class="button button-positive button-fab button-fab-bottom-right">
-            <i class="icon ion-arrow-graph-down-right"></i>
-        </button>
         <ion-nav-view name="menuContent"></ion-nav-view>
     </ion-side-menu-content>
     <ion-side-menu side="left">
@@ -21,21 +17,24 @@
             </div>
         </ion-header-bar>
         <ion-content class="stable-bg has-expanded-header">
-            <ion-list>
+            <ion-list class="SideMenuButton">
                 <ion-item nav-clear menu-close href="#/app/home">
                     Home
                 </ion-item>
                 <ion-item nav-clear menu-close href="#/app/about">
                     About
                 </ion-item>
+                <ion-item nav-clear menu-close href="#/app/curriculum">
+                    Curriculum
+                </ion-item>
+                <ion-item nav-clear menu-close href="#/app/faq">
+                    FAQ
+                </ion-item>
+                <ion-item nav-clear menu-close href="#/app/ourpartner">
+                    Partners
+                </ion-item>
                 <ion-item nav-clear menu-close href="#/app/register">
                     Register
-                </ion-item>
-                <ion-item nav-clear menu-close href="#/app/receipt">
-                    Receipt
-                </ion-item>
-                <ion-item nav-clear menu-close href="#/app/settings">
-                    Exit
                 </ion-item>
             </ion-list>
         </ion-content>

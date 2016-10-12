@@ -1,0 +1,19 @@
+<ion-view view-title="FAQ">
+    <ion-content class="im-wrapper">
+        <h4 class="text-center themeColor">Hive Africa Global Leaders Program FAQs</h4>
+        <img src="img/logo.png" alt="hive logo on faq view" class="col col-100 col-center">
+        
+        <ul class="list">
+            <li class="item item-text-wrap" ng-repeat="faq in faqs track by $index">
+                <h2 class="themeColor hiveNameTitle">{{faq.title}}</h2>
+                <p ng-bind-html="faq.body"> </p>
+                 <hr/>
+            </li>
+        </ul>
+        <!--clients logos can be here-->
+        <button class="button button-block button-assertive waves-button" ui-sref="app.register">
+            Register for Hive Africa
+        </button>
+        <img src="img/footerbkg.png" alt="" class="item-bg-image" width="100%">        
+    </ion-content>
+</ion-view>

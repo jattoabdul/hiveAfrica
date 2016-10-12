@@ -1,31 +1,29 @@
-﻿
-<ion-view view-title="About Hive">
+﻿<ion-view view-title="About Hive">
     <ion-content class="im-wrapper">
-        <h4>About Hive</h4>
-        <p>
-            Invoke Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam id necessitatibus obcaecati cupiditate odit, consectetur vel rem nulla maxime sunt? Sapiente molestiae ipsum id adipisci temporibus! At, ducimus similique repudiandae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero quam aspernatur, perferendis odio in magnam a, explicabo incidunt ad sit laboriosam iste necessitatibus! Sunt nulla distinctio sapiente, inventore nesciunt repellat. in a directive or controller to activate all ink-elements on the screen.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero sint, cupiditate culpa. Excepturi nam non maxime cum ea eius dolore accusantium temporibus voluptatem asperiores, sapiente libero voluptatum autem quam saepe.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia beatae at similique animi labore consequatur, nemo pariatur possimus recusandae quia fugit odit voluptates deserunt omnis incidunt sit. Corrupti, eius, recusandae.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda inventore aliquid eum, explicabo tenetur delectus facilis eos, repellat cumque unde alias ab nulla consequuntur minima. Adipisci recusandae rem tempora! Iste. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi esse hic, ratione quibusdam sunt laudantium ad inventore, rerum qui cum nobis 
-        </p>
-        <br/>
-        <div class="list card">
-            <div class="item item-avatar">
-                <img src="img/arya.jpg">
-                <h2>Speaker 1</h2>
-                <p>November 05, 1955</p>
-            </div>
-            <div class="item item-body">
-                <p>
-                This is a "Facebook" styled Card. The header is created from a Thumbnail List item,
-                the content is from a card-body consisting of an image and paragraph text. The footer
-                consists of tabs, icons aligned left, within the card-footer.
-                </p>
-                <!--<p>
-                <a href="#" class="subdued">1 Like</a>
-                <a href="#" class="subdued">5 Comments</a>
-                </p>-->
+        <h4>About Hive Africa</h4>
+        <img src="img/about.jpg" alt="about Hive Africa" width="100%" height="200px">                
+        </div>    
+        <div class="row">
+            <div class="col" ng-bind-html="aboutdetails">
             </div>
         </div>
+        <button class="button button-block button-assertive waves-button">
+            Download pdf Format
+        </button>
+        <br/>
+        <h3>Hive Africa Team</h3>
+        <div class="list card" ng-repeat="team in teams track by $index">
+            <div class="item item-image">
+                <img src="{{team.img_url}}" width="100%">
+            </div>
+            <h4 class="hiveNameTitle text-center">{{team.name}}</h4>
+            <h6 class="text-center">{{team.position}}</h6>
+            <div class="item item-body no-padding-top" ng-bind-html="team.bio">
+            </div>
+        </div>
+        <button class="button button-block button-assertive waves-button" ui-sref="app.register">
+            Register for Hive Africa
+        </button>
+        <img src="img/footerbkg.png" alt="" class="item-bg-image" width="100%">
     </ion-content>
 </ion-view>

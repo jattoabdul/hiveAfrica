@@ -6,6 +6,4 @@
             this.classList.toggle('active');
         });
     }
-
-
 });

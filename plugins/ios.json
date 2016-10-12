@@ -59,7 +59,13 @@
         "cordova-plugin-file-transfer": {
             "PACKAGE_NAME": "com.ionicframework.sample374926"
         },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "com.ionicframework.sample374926"
+        },
         "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.ionicframework.sample374926"
+        },
+        "cordova-plugin-x-toast": {
             "PACKAGE_NAME": "com.ionicframework.sample374926"
         }
     },
